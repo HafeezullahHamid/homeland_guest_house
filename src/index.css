@@ -1,13 +1,88 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1 {
+  font-size: 3em;
+  line-height: 1;
+  margin-bottom: 0.5em;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.orange_gradient {
+  /* @apply bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 bg-clip-text text-transparent; */
+
+  @apply bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-700 bg-clip-text text-transparent;
+
+}
+
+.head_text {
+  @apply mt-5 text-5xl font-extrabold leading-[1.15] text-black sm:text-6xl;
+}
+
+.blue_gradient {
+  @apply bg-gradient-to-r from-amber-500 via-blue-800 to-yellow-500 bg-clip-text;
+}
+
+.search_input {
+  @apply block w-full rounded-md border border-gray-200 bg-white py-2.5 pl-5 pr-12 text-sm shadow-lg font-medium focus:border-black focus:outline-none focus:ring-0;
+
+  width: 500px;
+  margin-left: 400px;
+  text-align: center;
+}
+
+.color {
+  background-color: rgb(179, 172, 161);
+  font-size: 3.5rem;
+}
+
+.home-bg {
+  background-image: url(https://porch.com/advice/wp-content/uploads/2023/06/digital-marketing-agency-ntwrk-g39p1kDjvSY-unsplash.jpg);
+  height: 93vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--lightblack);
+  background-blend-mode: multiply;
+  background-color: rgba(53, 51, 51, 0.5);
+}
+
+.home-bg h1 {
+  margin-top: 20px;
+}
+
+.home-bg p {
+  margin-top: 50px;
+}
+
+.grid {
+  box-shadow: 4px solid rgb(122, 120, 116);
+
+}
+
+.bg-white.shadow-md.rounded.p-6.text-center.group {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.top {
+  margin-top: -120px;
+}
+
+.main-heading {
+  animation-name: heading;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-delay: 0s;
+}
+
+@keyframes heading {
+  from {
+    color: #fff;
+    margin-left: 0px;
+  }
+
+  to {
+    color: #fff;
+    margin-left: 150px;
+  }
 }
